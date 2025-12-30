@@ -2,7 +2,7 @@
  * Artwork Upload Component with Drag & Drop
  */
 
-import React, { useState, useCallback } from 'react';
+import { useState, useCallback } from 'react';
 import { useDropzone } from 'react-dropzone';
 import { Upload, X, Image, FileText, Loader2 } from 'lucide-react';
 import {

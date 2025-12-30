@@ -22,6 +22,6 @@ export function useComplianceStatusQuery() {
 export function useComplianceEventsQuery(page: number = 1, limit: number = 20) {
   return useQuery({
     queryKey: ['compliance', 'events', page, limit],
-    queryFn: () => complianceApi.getEvents({ page, limit }),
+    queryFn: () => complianceApi.getEvents({ page }),
   });
 }

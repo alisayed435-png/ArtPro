@@ -2,7 +2,6 @@
  * Status Badge Component
  */
 
-import React from 'react';
 import { Badge } from '@/components/ui';
 import { cn, formatStatus } from '@/lib/utils';
 import type { OrderStatus, ArtworkStatus, HealthStatus } from '@/lib/types';
