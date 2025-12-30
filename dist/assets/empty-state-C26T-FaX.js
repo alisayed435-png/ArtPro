@@ -1,0 +1,6 @@
+import{c as d,j as t,v as s,B as i}from"./index-CB69qdz3.js";import{T as f}from"./error-state-CUjngZ8i.js";import{P as l}from"./package-BRqbylTi.js";/**
+ * @license lucide-react v0.446.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const u=d("Image",[["rect",{width:"18",height:"18",x:"3",y:"3",rx:"2",ry:"2",key:"1m3agn"}],["circle",{cx:"9",cy:"9",r:"2",key:"af1f0g"}],["path",{d:"m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21",key:"1xmnt7"}]]),g={default:l,orders:l,artwork:u,error:f};function p({icon:m,title:o,description:c,action:e,variant:r="default",className:n}){const a=m||g[r],x=e&&typeof e=="object"&&"label"in e&&"onClick"in e;return t.jsxs("div",{className:s("flex flex-col items-center justify-center py-12 px-4 text-center",n),children:[t.jsx("div",{className:s("h-16 w-16 rounded-full flex items-center justify-center mb-4",r==="error"?"bg-destructive/10":"bg-muted"),children:t.jsx(a,{className:s("h-8 w-8",r==="error"?"text-destructive":"text-muted-foreground")})}),t.jsx("h3",{className:"text-lg font-semibold mb-1",children:o}),c&&t.jsx("p",{className:"text-muted-foreground max-w-sm mb-4",children:c}),e&&(x?t.jsx(i,{onClick:e.onClick,children:e.label}):e)]})}export{p as E,u as I};

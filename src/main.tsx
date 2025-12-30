@@ -9,11 +9,7 @@ import { App } from './App';
 import './styles/globals.css';
 
 async function enableMocking() {
-  // Only enable MSW in development
-  if (process.env.NODE_ENV !== 'development') {
-    return;
-  }
-
+  // Enable MSW in both development and production for demo mode
   const { worker } = await import('./mocks/browser');
 
   // Start the worker with service worker options
