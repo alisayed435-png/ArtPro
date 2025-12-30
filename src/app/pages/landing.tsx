@@ -81,7 +81,7 @@ export function LandingPage() {
   // Redirect if already authenticated
   React.useEffect(() => {
     if (isAuthenticated) {
-      navigate('/dashboard', { replace: true });
+      navigate('/app', { replace: true });
     }
   }, [isAuthenticated, navigate]);
 
@@ -89,7 +89,7 @@ export function LandingPage() {
     setIsStartingDemo(true);
     try {
       await startDemoMode();
-      navigate('/dashboard');
+      navigate('/app');
     } catch (error) {
       console.error('Failed to start demo:', error);
     } finally {
@@ -140,17 +140,17 @@ export function LandingPage() {
           <Zap className="h-4 w-4" />
           Trusted by leading cannabis brands
         </div>
-        
+
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight max-w-4xl mx-auto mb-6">
           The Complete Packaging
           <span className="text-primary block">Operations Platform</span>
         </h1>
-        
+
         <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
-          Streamline your cannabis packaging operations with Calyx Command. 
+          Streamline your cannabis packaging operations with Calyx Command.
           Manage orders, artwork approvals, and stay compliant—all in one place.
         </p>
-        
+
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
           <Button size="lg" onClick={handleTryDemo} disabled={isStartingDemo} className="w-full sm:w-auto">
             {isStartingDemo ? (
@@ -171,7 +171,7 @@ export function LandingPage() {
             </Button>
           </Link>
         </div>
-        
+
         <p className="text-sm text-muted-foreground">
           No signup required • Explore dashboards, orders, artwork approvals, uploads
         </p>
@@ -221,7 +221,7 @@ export function LandingPage() {
             A complete suite of tools designed specifically for cannabis packaging operations.
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {features.map((feature) => {
             const Icon = feature.icon;
@@ -249,7 +249,7 @@ export function LandingPage() {
               Calyx Command is designed with cannabis industry regulations in mind.
             </p>
           </div>
-          
+
           <div className="grid sm:grid-cols-2 gap-4">
             {[
               'METRC API Integration',

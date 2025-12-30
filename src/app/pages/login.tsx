@@ -24,7 +24,7 @@ export function LoginPage() {
 
     try {
       await login(email, password);
-      navigate('/dashboard');
+      navigate('/app');
     } catch (err) {
       setError('Invalid credentials. For demo, use any email and password.');
     } finally {
@@ -36,7 +36,7 @@ export function LoginPage() {
     setIsStartingDemo(true);
     try {
       await startDemoMode();
-      navigate('/dashboard');
+      navigate('/app');
     } catch (error) {
       console.error('Failed to start demo:', error);
     } finally {
@@ -48,7 +48,7 @@ export function LoginPage() {
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-background to-muted/30">
       {/* Header */}
       <header className="container mx-auto px-4 py-6">
-        <Link to="/" className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
+        <Link to="/landing" className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
           <ArrowLeft className="h-4 w-4" />
           Back to home
         </Link>

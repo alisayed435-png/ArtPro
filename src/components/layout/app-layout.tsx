@@ -48,12 +48,12 @@ import {
 // ============================================================================
 
 const navItems = [
-  { path: '/dashboard', label: 'Dashboard', icon: LayoutDashboard },
-  { path: '/orders', label: 'Orders', icon: ShoppingCart },
-  { path: '/artwork', label: 'Artwork', icon: Palette },
-  { path: '/compliance', label: 'Compliance', icon: Shield },
-  { path: '/analytics', label: 'Analytics', icon: BarChart3 },
-  { path: '/status', label: 'System Status', icon: Activity },
+  { path: '/app', label: 'Dashboard', icon: LayoutDashboard },
+  { path: '/app/orders', label: 'Orders', icon: ShoppingCart },
+  { path: '/app/artwork', label: 'Artwork', icon: Palette },
+  { path: '/app/compliance', label: 'Compliance', icon: Shield },
+  { path: '/app/analytics', label: 'Analytics', icon: BarChart3 },
+  { path: '/app/status', label: 'System Status', icon: Activity },
 ];
 
 // ============================================================================
@@ -136,8 +136,8 @@ function Sidebar({ collapsed, onToggle, mobileOpen, onMobileClose }: SidebarProp
       {/* Navigation */}
       <nav className="flex-1 px-3 py-4 space-y-1">
         {navItems.map((item) => {
-          const isActive = location.pathname === item.path || 
-            (item.path !== '/dashboard' && location.pathname.startsWith(item.path));
+          const isActive = location.pathname === item.path ||
+            (item.path !== '/app' && location.pathname.startsWith(item.path));
           const Icon = item.icon;
 
           return (
@@ -242,7 +242,7 @@ function TopBar({ onMobileMenuClick }: TopBarProps) {
 
   const handleLogout = async () => {
     await logout();
-    navigate('/');
+    navigate('/landing');
   };
 
   return (
